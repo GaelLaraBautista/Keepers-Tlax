@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>KT | {% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    
+     <nav class="nav-navigator">
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo KeepersTlax" class="logo">
+            <h1>KeepersTlax</h1><h2>Store</h2>
+            <a href="{{url_for('home')}}">Inicio</a>
+            <a href="{{url_for('guantes')}}">Guantes</a>
+            <a href="{{url_for('textiles')}}">Textiles</a>
+            <a href="{{url_for('accesorios')}}">Accesorios</a>
+
+            <!-- Menu Desplegable-->
+            <div class="dropdown">
+            <span> Marcas</span>
+            <div class="dropdown-content">
+                <a href="#">Nike</a>
+                <a href="#">Adidas</a>
+                <a href="#">Puma</a>
+                <a href="#">Reusch</a>
+            </div>
+        </div>
+
+        <!-- Fin Menu Desplegable-->
+         <div class="icons">
+         <div class="cart-icon">
+            <a href="#"><img src="{{ url_for('static', filename='img/cart-icon.png') }}" alt="Carrito de Compras"></a>
+         </div>
+         <div class="user-icon">
+            <a href="#"><img src="{{ url_for('static', filename='img/user-icon.png') }}" alt="Usuario"></a>
+         </div>
+         <div class="search-icon">
+            <a href="#"><img src="{{ url_for('static', filename='img/search-icon.png') }}" alt="Buscar"></a>
+         </div>
+         </div>
+      </nav>
+    </head>
+    <body>
+
+        <!--- Cuerpo Principal de la aplicación  -->
+        <main class="main-container">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <!--- Fin Cuerpo Principal de la aplicación  -->
+
+        <footer class="footer-section">
+            <p>Keepers Tlax &copy; 2026</p>
+            <div class="social">
+                <h2>"Siguenos en Nuestras Redes"</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/index.js') }}" async defer></script>
+    </body>
+</html>

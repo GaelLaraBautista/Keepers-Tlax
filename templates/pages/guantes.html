@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}Guantes{% endblock %}
+
+{% block content %}
+<h2>Guantes de Portero</h2>
+<p>Descubre nuestra amplia gama de guantes de portero de las mejores marcas.</p>
+<div class="product-grid">
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante1.png') }}" alt="Guante 1">
+        <h3>Guante Pro Grip</h3>
+        <p>Precio: $49.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante2.png') }}" alt="Guante 2">
+        <h3>Guante Ultra Flex</h3>
+        <p>Precio: $59.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante3.png') }}" alt="Guante 3">
+        <h3>Guante Max Control</h3>
+        <p>Precio: $69.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+</div>
+{% endblock %}
