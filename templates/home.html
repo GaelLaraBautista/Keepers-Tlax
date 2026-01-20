@@ -3,6 +3,47 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h2>Bienvenido a KeepersTlax</h2>
-<p>Explora nuestra tienda y encuentra los mejores productos para porteros.</p>
+<slider-component class="my-slides">
+
+    <div class="slide">
+        <img src="/static/img/1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img src="/static/img/2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+        <img src="/static/img/3.jpg" alt="Slide 3">
+    </div>
+
+    <!-- Botones de navegación -->
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+</slider-component>
+<h2 class="section-title">Nuestros Lanzamientos</h2>
+<div class="product-grid">
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante1.png') }}" alt="Guante 1">
+        <h3>Guante Pro Grip</h3>
+        <p>Precio: $49.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante2.png') }}" alt="Guante 2">
+        <h3>Guante Ultra Flex</h3>
+        <p>Precio: $59.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/guante3.png') }}" alt="Guante 3">
+        <h3>Guante Max Control</h3>
+        <p>Precio: $69.99</p>
+        <button>Añadir al Carrito</button>
+    </div>
+</div>
+
+<!-- Sección adicional -->
+<div class="featured-section">
+    <h2 class="section-title">Destacados</h2>
+    <p>Explora nuestra colección premium de accesorios deportivos diseñados para el máximo rendimiento.</p>
+</div>
 {% endblock %}

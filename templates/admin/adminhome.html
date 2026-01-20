@@ -1,0 +1,21 @@
+{% extends "admin/admin.html" %}
+
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-5">Página del admin</h1>
+<p class="text-center">Aquí esta la pag del admin.</p>
+
+<form action="">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre del Producto</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio del Producto</label>
+        <input type="number" class="form-control" id="precio" name="precio" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear Producto</button>
+
+
+{% endblock %}
